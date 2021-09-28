@@ -32,10 +32,6 @@ int main()
     // Introduction and Requesting the necessary data
     while (havingUser)
     {
-        // Testing Code Area - Pending to be removed
-
-        ///
-
         cout << "-------------- Welcome to F-Veterinary --------------" << endl;
         cout << "How can we help you? Please enter an option" << endl;
         cout << "1. I need to register a cat." << endl;
