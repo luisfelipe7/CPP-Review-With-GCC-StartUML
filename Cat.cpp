@@ -6,11 +6,6 @@ Information: Class to Implement the Constructor and Methods for the Cat Class.
 
 */
 
-// Libraries
-#include <iostream>
-#include <ctime>
-#include <string>
-
 // Classes
 #include "Cat.h"
 
@@ -98,8 +93,25 @@ int Cat::getAge()
 }
 string Cat::getRequiredVaccine()
 {
-    // Pending to implement
-    return "Pending to implement";
+
+    time_t timeObject = time(nullptr);
+    tm *const pTimeObject = localtime(&timeObject);
+    int catAge = (1900 + pTimeObject->tm_year) - birthYear;
+    switch (catAge)
+    {
+    case 1:
+        return "The cat is requiring the Rabia vaccine";
+        break;
+    case 7:
+        return "The cat is requiring the Calicivirosis vaccine";
+        break;
+    case 10:
+        return "The cat is requiring the Peritonitis Infecciosa vaccine";
+        break;
+    default:
+        return "The cat is not requiring vaccines at this time";
+        break;
+    }
 }
 
 // Method to display the cat information

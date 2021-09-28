@@ -5,10 +5,6 @@ Class: Main.cpp
 
 */
 
-#include <iostream>
-#include <ctime>
-#include <string>
-
 // Classes
 #include "Cat.cpp"
 
@@ -36,6 +32,10 @@ int main()
     // Introduction and Requesting the necessary data
     while (havingUser)
     {
+        // Testing Code Area - Pending to be removed
+
+        ///
+
         cout << "-------------- Welcome to F-Veterinary --------------" << endl;
         cout << "How can we help you? Please enter an option" << endl;
         cout << "1. I need to register a cat." << endl;
@@ -66,7 +66,11 @@ int main()
             cout << endl;
             break;
         case 2:
-            // Pending to Implement
+            system("cls");
+            cout << "Here is the information about the vaccines required by your cat" << endl;
+            cout << cat1.getRequiredVaccine() << endl;
+            cout << endl;
+            system("pause");
             break;
         default:
             cout << "Please enter a valid option" << endl;

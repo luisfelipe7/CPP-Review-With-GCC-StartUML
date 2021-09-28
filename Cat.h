@@ -9,6 +9,7 @@ Information: Class to Implement the Cat with multiple attributes and methods
 // Libraries and Classes
 #include <iostream>
 #include <ctime>
+#include <string>
 
 using namespace std;
 
