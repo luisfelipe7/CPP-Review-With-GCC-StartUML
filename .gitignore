@@ -1,0 +1,12 @@
+# This is a git file to ignore files that we don't need to track/control
+
+# VS Code Config File
+.vscode
+
+# Executable and Configuration Files
+*.exe
+*.jar
+*.tar
+*.zip
+*.tgz
+
