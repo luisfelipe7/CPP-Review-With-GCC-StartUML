@@ -18,7 +18,6 @@ using namespace std;
 
 class Cat
 {
-
     // Attributes
 private:
     string name;

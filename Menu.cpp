@@ -55,12 +55,67 @@ void Menu::displayPrincipalMenu()
     cout << "4. Exit" << endl;
     cout << "Please enter the number of the option:" << endl;
     cin >> option;
-    (option == 4) ? byeMessage() : ((option == 3) ? displayVetMenu() : optionsForPrincipalMenu());
+    (option == 4) ? byeMessage() : ((option == 3) ? displayVetMenu() : menuCaller());
 }
 
-void Menu::optionsForPrincipalMenu()
+void Menu::menuCaller()
 {
-    // Pending to implement
+    switch (option)
+    {
+    case 2:
+        dataStructuresMenu();
+        break;
+    default:
+        system("cls");
+        cout << "------------------ Error ------------------" << endl;
+        cout << "Please enter a valid option" << endl;
+        cout << endl;
+        system("pause");
+        displayPrincipalMenu();
+        break;
+    }
+}
+
+void Menu::dataStructuresMenu()
+{
+    system("cls");
+    cout << "---------------------- Data Structures ----------------------" << endl;
+    cout << "-- Here are the available options:" << endl;
+    cout << "1. Pointers" << endl;
+    cout << "2. Vectors" << endl;
+    cout << "3. Matrices" << endl;
+    cout << "4. Return to Main Menu" << endl;
+    cout << "Please enter the number of the option:" << endl;
+
+    cin >> option;
+    system("cls");
+
+    switch (option)
+    {
+    case 1:
+        alg1.pointersTest();
+        dataStructuresMenu();
+        break;
+    case 2:
+        // Pending to Implement
+        break;
+    case 3:
+        // Pending to Implement
+        break;
+        // Pending to Implement
+    case 4:
+        displayPrincipalMenu();
+        break;
+        break;
+    default:
+        system("cls");
+        cout << "------------------ Error ------------------" << endl;
+        cout << "Please enter a valid option" << endl;
+        cout << endl;
+        system("pause");
+        dataStructuresMenu();
+        break;
+    }
 }
 
 void Menu::displayVetMenu()
