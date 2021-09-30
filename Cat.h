@@ -6,10 +6,11 @@ Information: Class to Implement the Cat with multiple attributes and methods
 
 */
 
-// Libraries and Classes
+// Including Libraries
 #include <iostream>
 #include <ctime>
 #include <string>
+#include <sstream>
 
 using namespace std;
 
