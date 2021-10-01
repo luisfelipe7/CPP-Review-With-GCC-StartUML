@@ -7,7 +7,7 @@ Information: Class to Manage the Principal and Secondary Menus and User.
 */
 
 // Including the Class
-#include "../Definition Files/Algorithm.cpp"
+#include "../Definition Files/Array.cpp"
 
 using namespace std;
 
@@ -19,6 +19,7 @@ private:
     int option;
     Cat cat1;
     Algorithm alg1;
+    Array array1;
 
     // Declaring the principal methods for the menu
 public:
@@ -33,6 +34,7 @@ public:
     // Principal methods for the interface
     void displayPrincipalMenu();
     void displayVetMenu();
+    void displayArrayMenu();
     void dataStructuresMenu();
     void optionsForPrincipalMenu();
     void optionsForVetMenu();

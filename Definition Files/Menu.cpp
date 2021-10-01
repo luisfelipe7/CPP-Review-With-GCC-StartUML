@@ -82,7 +82,7 @@ void Menu::dataStructuresMenu()
     cout << "---------------------- Data Structures ----------------------" << endl;
     cout << "-- Here are the available options:" << endl;
     cout << "1. Pointers" << endl;
-    cout << "2. Vectors" << endl;
+    cout << "2. Arrays" << endl;
     cout << "3. Matrices" << endl;
     cout << "4. Return to Main Menu" << endl;
     cout << "Please enter the number of the option:" << endl;
@@ -97,7 +97,8 @@ void Menu::dataStructuresMenu()
         dataStructuresMenu();
         break;
     case 2:
-        // Pending to Implement
+        array1.arraysTests();
+        dataStructuresMenu();
         break;
     case 3:
         // Pending to Implement

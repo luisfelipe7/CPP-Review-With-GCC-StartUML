@@ -69,7 +69,7 @@ void Algorithm::pointersTest()
 
     int b = 84;
 
-    cout << "------------------ Playing with Pointers------------------" << endl;
+    cout << "------------------- Pointers------------------" << endl;
     cout << "--- Declared these variables" << endl;
     cout << "int *pA; \n pA = new int;  \n *pA = 4; \n int *pB; pB = new int; \n *pB = 110; \n int b = 84; \n"<< endl;
     cout << "--- Test 1:" << endl;
