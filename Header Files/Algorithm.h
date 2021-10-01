@@ -31,6 +31,7 @@ void setNumber2(int Number2);
 void setWord1(string Word1);
 void setWord2(string Word2);
 // Methods
+// Method to make a test with the pointers
 void pointersTest();
 
 

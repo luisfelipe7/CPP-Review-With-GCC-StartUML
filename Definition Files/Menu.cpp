@@ -41,6 +41,9 @@ void Menu::setOption(int Option)
     option = Option;
 }
 
+// ----------------- Principal Menus ---------------------
+
+
 // Principal methods for the interface
 void Menu::displayPrincipalMenu()
 {
@@ -75,6 +78,8 @@ void Menu::menuCaller()
         break;
     }
 }
+
+// ----------------- Data Structures Menu ---------------------
 
 void Menu::dataStructuresMenu()
 {
@@ -117,6 +122,9 @@ void Menu::dataStructuresMenu()
         break;
     }
 }
+
+
+// ----------------- ArraySP Menu ---------------------
 
 void Menu::displayArrayMenu()
 {
@@ -169,20 +177,24 @@ void Menu::modifyArraySP()
         array1.removeValueOnTheArray();
         break;
     case 6:
+        cout << "------------------------ Printing the Array ------------------------" << endl;
         array1.printArraySP();
         break;
     case 7:
         //Nothing to do here
         break;
     default:
-
         cout << "------------------ Error ------------------" << endl;
         cout << "Please enter a valid option" << endl;
         cout << endl;
+        system("pause");
         break;
     }
     optionsForArraySP();
 }
+
+// ----------------- Veterinary Menu ---------------------
+
 
 void Menu::displayVetMenu()
 {
@@ -196,6 +208,8 @@ void Menu::displayVetMenu()
     cin >> option;
     optionsForVetMenu();
 }
+
+
 
 void Menu::optionsForVetMenu()
 {

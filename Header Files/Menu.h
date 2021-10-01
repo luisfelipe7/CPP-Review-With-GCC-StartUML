@@ -32,14 +32,23 @@ public:
     void setNameOfTheUser(string NameOfTheUser);
     void setOption(int Option);
     // Principal methods for the interface
+    // Principal Menu
     void displayPrincipalMenu();
+    // Veterinary Menu
     void displayVetMenu();
+    // Array Menu
     void displayArrayMenu();
+    // Data Structure Menu
     void dataStructuresMenu();
+    // Options to Modify Array SP
     void optionsForArraySP();
+    // Calling the Methods to Modify the Array SP
     void modifyArraySP();
+    // Calling the Methods for the principal menu
     void optionsForPrincipalMenu();
+    // Available options on the Veterinary
     void optionsForVetMenu();
+    // In charge of calling the right menu
     void menuCaller();
     void byeMessage();
     ~Menu();

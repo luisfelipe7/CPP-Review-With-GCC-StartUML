@@ -29,7 +29,7 @@ void insertElementAtPositionSP(int PositionSP, int ValueSP);
 void deleteElementPositionSP(int PositionSP);
 void deleteElementValueSP(int ValueSP);
 void arraysTests();
-//Methods to make requests
+//Methods to make requests and then call the methods to modify the arrays
 void initArraySP();
 void insertValueAtSpecificPosition();
 void insertValueAtEmptyPlace();
