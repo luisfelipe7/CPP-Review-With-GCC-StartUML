@@ -97,8 +97,7 @@ void Menu::dataStructuresMenu()
         dataStructuresMenu();
         break;
     case 2:
-        array1.arraysTests();
-        dataStructuresMenu();
+        displayArrayMenu();
         break;
     case 3:
         // Pending to Implement
@@ -117,6 +116,72 @@ void Menu::dataStructuresMenu()
         dataStructuresMenu();
         break;
     }
+}
+
+void Menu::displayArrayMenu()
+{
+    system("cls");
+    cout << "---------------------- Arrays ----------------------" << endl;
+    cout << "-- These are the kind of arrays that we handle" << endl;
+    cout << "1. Static with Primitive Data " << endl;
+    cout << "2. Static with Objects" << endl;
+    cout << "3. Return to Data Structures" << endl;
+    cout << "Please enter the number of the option:" << endl;
+    cin >> option;
+    (option == 3) ? dataStructuresMenu() : optionsForArraySP();
+}
+
+void Menu::optionsForArraySP()
+{
+    system("cls");
+    cout << "---------------------- Static with Primitive Data ----------------------" << endl;
+    cout << "-- Array with Size 9, Here are the actions that you can do" << endl;
+    cout << "1. Initialize the Array" << endl;
+    cout << "2. Insert value at specific position" << endl;
+    cout << "3. Insert value at first empty place" << endl;
+    cout << "4. Remove value at specific position" << endl;
+    cout << "5. Remove value on the Array" << endl;
+    cout << "6. Print Array" << endl;
+    cout << "7. Return to Arrays Menu" << endl;
+    cout << "Please enter the number of the option:" << endl;
+    cin >> option;
+    (option == 7) ? displayArrayMenu() : modifyArraySP();
+}
+
+void Menu::modifyArraySP()
+{
+    system("cls");
+    switch (option)
+    {
+    case 1:
+        array1.initArraySP();
+        break;
+    case 2:
+        array1.insertValueAtSpecificPosition();
+        break;
+    case 3:
+        array1.insertValueAtEmptyPlace();
+        break;
+    case 4:
+        array1.removeValueAtSpecificPosition();
+        break;
+    case 5:
+        array1.removeValueOnTheArray();
+        break;
+    case 6:
+        array1.printArraySP();
+        break;
+    case 7:
+        //Nothing to do here
+        break;
+    default:
+
+        cout << "------------------ Error ------------------" << endl;
+        cout << "Please enter a valid option" << endl;
+        cout << endl;
+        break;
+    }
+    optionsForArraySP();
 }
 
 void Menu::displayVetMenu()

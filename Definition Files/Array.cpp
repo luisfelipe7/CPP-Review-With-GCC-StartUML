@@ -174,3 +174,61 @@ void Array::arraysTests()
 
     printArraySP();
 }
+
+void Array::initArraySP()
+{
+    system("cls");
+    int values = 0;
+    cout << "------------------------ Initializing the Array ------------------------" << endl;
+    cout << "How many initial values do you want the array to have?" << endl;
+    cin >> values;
+    fillArraySP(values, 9);
+    printArraySP();
+}
+
+void Array::insertValueAtSpecificPosition()
+{
+    system("cls");
+    int specificPosition = 0;
+    int value = 0;
+    cout << "------------------------ Inserting Value At Specific Position ------------------------" << endl;
+    cout << "Enter the position of the value that you want to enter (0 to 9)" << endl;
+    cin >> specificPosition;
+    cout << "Please enter the value:" << endl;
+    cin >> value;
+    insertElementAtPositionSP(specificPosition, value);
+    printArraySP();
+}
+
+void Array::insertValueAtEmptyPlace()
+{
+    system("cls");
+    int value = 0;
+    cout << "------------------------ Inserting Value At Empty Place ------------------------" << endl;
+    cout << "Please enter the value:" << endl;
+    cin >> value;
+    insertElementAtEmptyPlaceSP(value);
+    printArraySP();
+}
+
+void Array::removeValueAtSpecificPosition()
+{
+    system("cls");
+    int specificPosition = 0;
+    cout << "------------------------ Removing Value at Specific Position ------------------------" << endl;
+    cout << "Enter the position of the value that you want to delete (0 to 9)" << endl;
+    cin >> specificPosition;
+    deleteElementPositionSP(specificPosition);
+    printArraySP();
+}
+
+void Array::removeValueOnTheArray()
+{
+    system("cls");
+    int value = 0;
+    cout << "------------------------ Removing Specific Value ------------------------" << endl;
+    cout << "Please enter the value that you want to remove on the array:" << endl;
+    cin >> value;
+    deleteElementValueSP(value);
+    printArraySP();
+}

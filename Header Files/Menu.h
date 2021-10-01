@@ -36,6 +36,8 @@ public:
     void displayVetMenu();
     void displayArrayMenu();
     void dataStructuresMenu();
+    void optionsForArraySP();
+    void modifyArraySP();
     void optionsForPrincipalMenu();
     void optionsForVetMenu();
     void menuCaller();

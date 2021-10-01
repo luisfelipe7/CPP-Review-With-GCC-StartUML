@@ -22,10 +22,17 @@ Array(int QuantitySP, int SizeSP);
 void fillArraySP(int QuantitySP, int SizeSP);
 int getQuantitySP();
 void setQuantitySP(int QuantitySP);
+//Methods to modify and handle the array
 void printArraySP();
 void insertElementAtEmptyPlaceSP(int ValueSP);
 void insertElementAtPositionSP(int PositionSP, int ValueSP);
 void deleteElementPositionSP(int PositionSP);
 void deleteElementValueSP(int ValueSP);
 void arraysTests();
+//Methods to make requests
+void initArraySP();
+void insertValueAtSpecificPosition();
+void insertValueAtEmptyPlace();
+void removeValueAtSpecificPosition();
+void removeValueOnTheArray();
 };
