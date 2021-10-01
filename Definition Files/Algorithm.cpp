@@ -6,7 +6,7 @@ Information: Class to Implement Multiple Algorithms
 
 */
 
-#include "Algorithm.h"
+#include "../Header Files/Algorithm.h"
 
 // Constructors
 Algorithm::Algorithm()
@@ -71,7 +71,7 @@ void Algorithm::pointersTest()
 
     cout << "------------------ Playing with Pointers------------------" << endl;
     cout << "--- Declared these variables" << endl;
-    cout << " int *pA; \n pA = new int;  \n *pA = 4; \n int *pB; pB = new int; \n *pB = 110; \n int b = 84; \n"<< endl;
+    cout << "int *pA; \n pA = new int;  \n *pA = 4; \n int *pB; pB = new int; \n *pB = 110; \n int b = 84; \n"<< endl;
     cout << "--- Test 1:" << endl;
     cout << "Value of *pA " << *pA << endl;
     cout << "Value of pA " << pA << endl;
@@ -142,7 +142,7 @@ void Algorithm::pointersTest()
     Cat *pCat = new Cat("Felix", 10, 07, 1997, "116890358");
     cout << "pCat " << pCat << endl;
     pCat->displayCatInformation();
-    system("pause"); 
+    system("pause");
     /* 
     -- This will generate an error because we free up the space
     delete pCat;

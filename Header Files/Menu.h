@@ -7,7 +7,7 @@ Information: Class to Manage the Principal and Secondary Menus and User.
 */
 
 // Including the Class
-#include "Algorithm.cpp"
+#include "../Definition Files/Algorithm.cpp"
 
 using namespace std;
 

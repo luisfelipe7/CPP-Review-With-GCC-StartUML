@@ -7,7 +7,7 @@ Information: Class to Implement Multiple Algorithms
 */
 
 // Included Cat.h to include the libraries
-#include "Cat.cpp"
+#include "../Definition Files/Cat.cpp"
 
 class Algorithm {
 private:

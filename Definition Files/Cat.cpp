@@ -7,7 +7,7 @@ Information: Class to Implement the Constructor and Methods for the Cat Class.
 */
 
 // Classes
-#include "Cat.h"
+#include "../Header Files/Cat.h"
 
 using namespace std;
 
