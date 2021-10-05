@@ -33,6 +33,21 @@ void setWord2(string Word2);
 // Methods
 // Method to make a test with the pointers
 void pointersTest();
-
+// Method to print all the values smaller than Number 1
+void valuesSmallerThanNumber1();
+// Method to print all the values smaller and pair than Number 1
+void valuesSmallerPairsThanNumber1();
+// Method to say how can we order x people in rows equally
+void waysToOrderInRowsPeople();
+// Method to verify if a number is perfect
+void checkNumberIsPerfect();
+// Method to verify if two numbers are friends
+void checkAreFriends();
+// Method to verify if a number is prime or not
+void checkPrimeNumber();
+// Method to verify if a number is Armstrong
+void checkArmstrong();
+// Method to verify if a number is Armstrong Recursive
+bool checkArmstrongRecursive(int Number1, int SumOfValues, int NewNumber1);
 
 };

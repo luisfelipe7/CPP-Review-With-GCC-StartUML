@@ -43,7 +43,6 @@ void Menu::setOption(int Option)
 
 // ----------------- Principal Menus ---------------------
 
-
 // Principal methods for the interface
 void Menu::displayPrincipalMenu()
 {
@@ -65,6 +64,9 @@ void Menu::menuCaller()
 {
     switch (option)
     {
+    case 1:
+        quickAlgorithmsMenu();
+        break;
     case 2:
         dataStructuresMenu();
         break;
@@ -75,6 +77,87 @@ void Menu::menuCaller()
         cout << endl;
         system("pause");
         displayPrincipalMenu();
+        break;
+    }
+}
+
+// ----------------- Quick Algorithms Menu -------------------
+
+void Menu::quickAlgorithmsMenu()
+{
+
+    system("cls");
+    cout << "---------------------- Quick Algorithms ----------------------" << endl;
+    cout << "-- Here are the available options:" << endl;
+    cout << "1. Lower Numbers than Number1" << endl;
+    cout << "2. Lower and Pair Numbers than Number1 " << endl;
+    cout << "3. Ways to order people in rows equally" << endl;
+    cout << "4. Check if a number is perfect" << endl;
+    cout << "5. Check if two numbers are friends " << endl;
+    cout << "6. Check if a number is prime" << endl;
+    cout << "7. Check if a number is Armstrong" << endl;
+    cout << "8. Check if a number is Armstrong recursive" << endl;
+    cout << "9. Return to Main Menu" << endl;
+    cout << "Please enter the number of the option:" << endl;
+    cin >> option;
+    system("cls");
+    switch (option)
+    {
+    case 1:
+        alg1.setNumber1(14);
+        alg1.valuesSmallerThanNumber1();
+        quickAlgorithmsMenu();
+        break;
+    case 2:
+        alg1.valuesSmallerPairsThanNumber1();
+        quickAlgorithmsMenu();
+        break;
+    case 3:
+        alg1.waysToOrderInRowsPeople();
+        quickAlgorithmsMenu();
+        break;
+    case 4:
+        alg1.checkNumberIsPerfect();
+        quickAlgorithmsMenu();
+        break;
+    case 5:
+        alg1.checkAreFriends();
+        quickAlgorithmsMenu();
+        break;
+    case 6:
+        alg1.checkPrimeNumber();
+        quickAlgorithmsMenu();
+        break;
+    case 7:
+        alg1.checkArmstrong();
+        quickAlgorithmsMenu();
+        break;
+    case 8:
+        system("cls");
+        cout << "---------------- Check if a number is Armstrong Recursive ----------------" << endl;
+        cout << "-- Please enter the number that you want to verify: " << endl;
+        cin >> option;
+        if (alg1.checkArmstrongRecursive(option, 0, option))
+        {
+            cout << "The number entered is Armstrong" << endl;
+        }
+        else
+        {
+            cout << "The number entered is not Armstrong" << endl;
+        }
+        system("pause");
+        quickAlgorithmsMenu();
+        break;
+    case 9:
+        displayPrincipalMenu();
+        break;
+    default:
+        system("cls");
+        cout << "------------------ Error ------------------" << endl;
+        cout << "Please enter a valid option" << endl;
+        cout << endl;
+        system("pause");
+        quickAlgorithmsMenu();
         break;
     }
 }
@@ -111,7 +194,6 @@ void Menu::dataStructuresMenu()
     case 4:
         displayPrincipalMenu();
         break;
-        break;
     default:
         system("cls");
         cout << "------------------ Error ------------------" << endl;
@@ -122,7 +204,6 @@ void Menu::dataStructuresMenu()
         break;
     }
 }
-
 
 // ----------------- ArraySP Menu ---------------------
 
@@ -195,7 +276,6 @@ void Menu::modifyArraySP()
 
 // ----------------- Veterinary Menu ---------------------
 
-
 void Menu::displayVetMenu()
 {
     system("cls");
@@ -208,8 +288,6 @@ void Menu::displayVetMenu()
     cin >> option;
     optionsForVetMenu();
 }
-
-
 
 void Menu::optionsForVetMenu()
 {

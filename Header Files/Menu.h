@@ -40,6 +40,8 @@ public:
     void displayArrayMenu();
     // Data Structure Menu
     void dataStructuresMenu();
+    // Quick Algorithms Menu
+    void quickAlgorithmsMenu();
     // Options to Modify Array SP
     void optionsForArraySP();
     // Calling the Methods to Modify the Array SP
