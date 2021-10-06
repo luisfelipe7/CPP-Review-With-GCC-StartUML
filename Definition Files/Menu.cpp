@@ -92,12 +92,16 @@ void Menu::quickAlgorithmsMenu()
     cout << "1. Lower Numbers than Number1" << endl;
     cout << "2. Lower and Pair Numbers than Number1 " << endl;
     cout << "3. Ways to order people in rows equally" << endl;
-    cout << "4. Check if a number is perfect" << endl;
-    cout << "5. Check if two numbers are friends " << endl;
-    cout << "6. Check if a number is prime" << endl;
-    cout << "7. Check if a number is Armstrong" << endl;
-    cout << "8. Check if a number is Armstrong recursive" << endl;
-    cout << "9. Return to Main Menu" << endl;
+    cout << "4. Verify if a number is perfect" << endl;
+    cout << "5. Verify if two numbers are friends " << endl;
+    cout << "6. Verify if a number is prime" << endl;
+    cout << "7. Verify if a number is Armstrong" << endl;
+    cout << "8. Verify if a number is Armstrong recursive" << endl;
+    cout << "9. Obtain ULAM Conjecture" << endl;
+    cout << "10. Obtain Factorial Recursive"<<endl;
+    cout << "11. Obtain Fibonacci Value"<<endl;
+    cout << "12. Check Discover Value"<<endl;
+    cout << "13. Return to Main Menu" << endl;
     cout << "Please enter the number of the option:" << endl;
     cin >> option;
     system("cls");
@@ -149,6 +153,22 @@ void Menu::quickAlgorithmsMenu()
         quickAlgorithmsMenu();
         break;
     case 9:
+        alg1.getUlamConjecture();
+        quickAlgorithmsMenu();
+        break;
+    case 10:
+        alg1.getFactorial();
+        quickAlgorithmsMenu();
+        break;
+    case 11:
+        alg1.getFibonacci();
+        quickAlgorithmsMenu();
+        break;
+    case 12:
+        alg1.getDiscover();
+        quickAlgorithmsMenu();
+        break;
+    case 13:
         displayPrincipalMenu();
         break;
     default:

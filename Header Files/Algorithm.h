@@ -49,5 +49,20 @@ void checkPrimeNumber();
 void checkArmstrong();
 // Method to verify if a number is Armstrong Recursive
 bool checkArmstrongRecursive(int Number1, int SumOfValues, int NewNumber1);
+// Methods to check ULAM Conjecture
+void getUlamConjecture();
+string checkUlam(int Value);
+// Methods to get the Factorial from a Number
+void getFactorial();
+int checkFactorial(int Value);
+int checkFactorialNP();
+int checkFactorialNPE();
+// Methods to get the Fibonnaci Succesion from a Number
+void getFibonacci();
+int checkFibonacci(int Value);
+// Method to Discover
+void getDiscover();
+float checkDiscover();
+
 
 };

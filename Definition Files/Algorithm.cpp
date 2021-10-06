@@ -332,17 +332,158 @@ void Algorithm::checkArmstrong()
     system("pause");
 }
 
-bool Algorithm::checkArmstrongRecursive(int Number1, int SumOfValues, int NewNumber1){
-    if(to_string(NewNumber1).length() == 1){
-        SumOfValues+=pow(NewNumber1,to_string(Number1).length());
-        if(SumOfValues == Number1){
+// Verify if a number is Armstrong Recursive
+bool Algorithm::checkArmstrongRecursive(int Number1, int SumOfValues, int NewNumber1)
+{
+    if (to_string(NewNumber1).length() == 1)
+    {
+        SumOfValues += pow(NewNumber1, to_string(Number1).length());
+        if (SumOfValues == Number1)
+        {
             return true;
-        }else{
+        }
+        else
+        {
             return false;
         }
-    }else{
-        SumOfValues+= pow(NewNumber1%10,to_string(Number1).length());
-        NewNumber1/=10;
-        return checkArmstrongRecursive(Number1,SumOfValues,NewNumber1);
     }
+    else
+    {
+        SumOfValues += pow(NewNumber1 % 10, to_string(Number1).length());
+        NewNumber1 /= 10;
+        return checkArmstrongRecursive(Number1, SumOfValues, NewNumber1);
+    }
+}
+
+// Verify ULAM Conjecture
+void Algorithm::getUlamConjecture()
+{
+    system("cls");
+    cout << "---------------- ULAM Conjecture ----------------" << endl;
+    cout << "-- Please enter the value to get the conjecture: " << endl;
+    cin >> number1;
+    cout << "Here is your ULAM Conjecture : \n " << checkUlam(number1) << endl;
+    system("pause");
+}
+
+// Get ULAM Conjecture Recursive
+string Algorithm::checkUlam(int Value)
+{
+    if (Value == 1)
+    {
+        return "1";
+    }
+    else
+    {
+        if (Value % 2 == 0)
+        {
+            return to_string(Value) + " - " + checkUlam(Value / 2);
+        }
+        else
+        {
+            return to_string(Value) + " - " + checkUlam((Value * 3) + 1);
+        }
+    }
+}
+
+// Verify Factorial
+void Algorithm::getFactorial()
+{
+    system("cls");
+    cout << "---------------- Factorial ----------------" << endl;
+    cout << "-- Please enter the value to get the factorial (!): " << endl;
+    cin >> number1;
+    cout << "Here is factorial : \n " << checkFactorialNPE() << endl;
+    system("pause");
+}
+
+// Check Factorial Recursive with Parameter
+int Algorithm::checkFactorial(int Value)
+{
+    if (Value <= 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return Value * checkFactorial(Value - 1);
+    }
+}
+
+// Check Factorial Recursive without Parameter and Using Two Variables
+int Algorithm::checkFactorialNP()
+{
+    if (number1 <= 1)
+    {
+        return 1;
+    }
+    else
+    {
+        number2 = number1;
+        number1 -= 1;
+        return number2 * checkFactorialNP();
+    }
+}
+
+// Check Factorial Recursive without Parameter and Using One Variable
+int Algorithm::checkFactorialNPE()
+{
+    if (number1 <= 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return number1-- * checkFactorialNP();
+    }
+}
+
+// Request Fibonacci Value
+void Algorithm::getFibonacci()
+{
+    system("cls");
+    cout << "---------------- Fibonacci ----------------" << endl;
+    cout << "-- Please enter the value to get the fibonacci: " << endl;
+    cin >> number1;
+    cout << "Here is fibonacci: \n " << checkFibonacci(number1) << endl;
+    system("pause");
+}
+
+// Get Fibonacci Value
+int Algorithm::checkFibonacci(int Value)
+{
+    if (Value <= 1)
+    {
+        return Value;
+    }
+    else
+    {
+        return checkFibonacci(Value - 1) + checkFibonacci(Value - 2);
+    }
+}
+
+void Algorithm::getDiscover()
+{
+    system("cls");
+    cout << "---------------- To Discover ----------------" << endl;
+    cout << "-- Please enter the value to get the output: " << endl;
+    cin >> number1;
+    cout << "Here is output: \n " << checkDiscover() << endl;
+    system("pause");
+}
+
+float Algorithm::checkDiscover()
+{
+
+    int i = 1, s = 0, n = 0;
+    while (i <= number1)
+    {
+        if ((i % 2 == 0) && (number1 % i == 0))
+        {
+            n = n + 1;
+            s = s + i;
+        }
+        i++;
+    }
+    return s / n;
 }
