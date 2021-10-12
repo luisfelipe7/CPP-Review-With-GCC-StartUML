@@ -10,6 +10,9 @@ Information: Class to Manage the Principal and Secondary Menus and User.
 
 #include "../Header Files/Menu.h"
 
+// Defining the static attribute 
+string Menu::NAME="Felipe Castro";
+
 // Constructors
 Menu::Menu()
 {

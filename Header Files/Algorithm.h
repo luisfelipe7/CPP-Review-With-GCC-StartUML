@@ -6,8 +6,19 @@ Information: Class to Implement Multiple Algorithms
 
 */
 
-// Included Cat.h to include the libraries
-#include "../Definition Files/Cat.cpp"
+// This means that this header file will only ever be included once in a specific destination file
+#pragma once 
+
+// Define of the class
+#ifndef ALGORITHM_H
+#define ALGORITHM_H
+
+// Including Libraries
+#include <iostream>
+#include <ctime>
+#include <string>
+#include <sstream>
+#include <math.h>
 
 class Algorithm {
 private:
@@ -66,3 +77,5 @@ float checkDiscover();
 
 
 };
+
+#endif

@@ -6,8 +6,18 @@ Information: Class to Manage and Implement a Static Container with Primitive Dat
 
 */
 
+// This means that this header file will only ever be included once in a specific destination file
+#pragma once 
+
+// Define of the class
+#ifndef ARRAY_H
+#define ARRAY_H
+
+
 // Including the Classes
-#include "../Definition Files/Algorithm.cpp"
+#include "../Definition Files/Cat.cpp"
+#include "../Definition Files/Dog.cpp"
+
 
 class Array{
 // Creating the attributes 
@@ -36,3 +46,5 @@ void insertValueAtEmptyPlace();
 void removeValueAtSpecificPosition();
 void removeValueOnTheArray();
 };
+
+#endif

@@ -6,12 +6,20 @@ Information: Class to Implement the Cat with multiple attributes and methods
 
 */
 
+// This means that this header file will only ever be included once in a specific destination file
+#pragma once 
+
+// Define of the class
+#ifndef CAT_H
+#define CAT_H
+
 // Including Libraries
 #include <iostream>
 #include <ctime>
 #include <string>
 #include <sstream>
 #include <math.h>
+
 
 using namespace std;
 
@@ -52,3 +60,5 @@ public:
     // Destructors
     ~Cat();
 };
+
+#endif

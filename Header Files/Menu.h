@@ -6,8 +6,27 @@ Information: Class to Manage the Principal and Secondary Menus and User.
 
 */
 
-// Including the Class
+// This means that this header file will only ever be included once in a specific destination file
+#pragma once 
+
+// Define of the class
+#ifndef MENU_H
+#define MENU_H
+
+
+// Including Libraries
+#include <iostream>
+#include <ctime>
+#include <string>
+#include <sstream>
+#include <math.h>
+
+// Including the Classes
 #include "../Definition Files/Array.cpp"
+#include "../Definition Files/Algorithm.cpp"
+
+// Example of Global variable
+#define CREATOR FELIPE_CASTRO
 
 using namespace std;
 
@@ -20,6 +39,7 @@ private:
     Cat cat1;
     Algorithm alg1;
     Array array1;
+    static string NAME;
 
     // Declaring the principal methods for the menu
 public:
@@ -55,3 +75,5 @@ public:
     void byeMessage();
     ~Menu();
 };
+
+#endif
