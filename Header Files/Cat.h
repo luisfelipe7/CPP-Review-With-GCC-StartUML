@@ -20,7 +20,6 @@ Information: Class to Implement the Cat with multiple attributes and methods
 #include <sstream>
 #include <math.h>
 
-
 using namespace std;
 
 // Declaring the class Cat

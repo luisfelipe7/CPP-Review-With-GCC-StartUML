@@ -17,8 +17,11 @@ Information: Class to Implement An Abstract Class to Generate Multiple Kinds of 
 #include <iostream>
 #include <ctime>
 #include <string>
+#include <string.h>
 #include <sstream>
 #include <math.h>
+
+using namespace std;
 
 class Animal
 {

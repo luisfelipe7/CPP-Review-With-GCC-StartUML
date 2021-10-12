@@ -20,6 +20,8 @@ Information: Class to Implement Multiple Algorithms
 #include <sstream>
 #include <math.h>
 
+using namespace std;
+
 class Algorithm {
 private:
 // Attributes to perform multiple algorithms

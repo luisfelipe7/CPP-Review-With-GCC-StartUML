@@ -15,8 +15,7 @@ using namespace std;
 int main()
 {
     // Declaring the Menu to start the program
-
-    /*try
+    try
     {
         Menu menu1;
         menu1.displayPrincipalMenu();
@@ -24,23 +23,14 @@ int main()
     catch (const std::exception &e)
     {
         cout << e.what() << endl;
-    }*/
+    }
 
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-
+    system("pause");
 
     return 0;
 }
 
+// ----------- OTHER DOCUMENTATION ----------------------
 
 /* -----------  Casting Information --------------------
 
@@ -63,5 +53,22 @@ if (Dog *pDog = dynamic_cast<Dog*>(animal1))
 delete animal1;
     system("pause");
 
+
+*/
+
+/* ------------ Static Array with Objects ----------------------------
+
+Dog *dog1= new Dog();
+Animal *ptrAnimal= dog1;
+Shark arraySSO[9]; // Stactic Array to Save Static Objects 9 Values (From 0 to 9)
+Shark s1("1", "Sharky", 12, "10-10-1005", "Male", false, 0, true, false, 200, 40);
+arraySSO[0] = s1;
+arraySSO[0].getType();
+arraySSO[0].captivityInformation();
+cout << arraySSO[0].getName() << endl;
+arraySSO[0].sound();
+arraySSO[0].escape();
+arraySSO[0].eat(*ptrAnimal);
+arraySSO[0].eat(arraySSO[0]);
 
 */
