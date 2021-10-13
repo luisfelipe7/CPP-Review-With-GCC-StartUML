@@ -2,7 +2,7 @@
 
 Author: Felipe Castro
 Class: Array.h
-Information: Class to Manage and Implement a Static Container with Primitive Data
+Information: Manage and Implement a Static Container with Primitive Data
 
 */
 
@@ -25,10 +25,9 @@ private:
 int arraySP[9]; // Stactic Array to Save Primitive Data Ints 9 Values (From 0 to 8)
 int sizeSP; // Handle the Size of the Array
 int quantitySP; // Handle the quantity of data on the Array
-Shark arraySSO[9]; // Stactic Array to Save Static Objects 9 Values (From 0 to 9)
-int sizeSS0; // Handle the Size of the Array
-int quantitySS0; // Handle the quantity of data on the Array
-
+Animal **animals; // Dynamic Array of Dynamic Objects
+int sizeA; //Handle the Size of the Animals
+int quantityA; // Handle the quantity of animals on the Array
 
 public:
 Array(); 
@@ -49,8 +48,17 @@ void insertValueAtSpecificPosition();
 void insertValueAtEmptyPlace();
 void removeValueAtSpecificPosition();
 void removeValueOnTheArray();
-
-
+// Methods for the Animals Array
+void printArrayA();
+void initializeArrayA();
+const int getSizeA();
+const int getQuantityA();
+void setSizeA(int SizeA);
+void setQuantityA(int QuantityA);
+void insertAnimal();
+void insertShark();
+void insertDog();
+void deleteElementA();
 };
 
 #endif

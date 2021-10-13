@@ -2,7 +2,7 @@
 
 Author: Felipe Castro
 Class: Animal.cpp
-Information: Class to Implement An Abstract Class to Generate Multiple Kinds of Animals
+Information: Abstract Class to Generate Multiple Kinds of Animals
 
 */
 
@@ -27,6 +27,9 @@ Animal::Animal(string Id, string Name, int Age, string Birthdate, string Sex)
     birthDate = Birthdate;
     sex = Sex;
 }
+
+// Methods 
+
 void Animal::eat()
 {
     cout << "I am eating food" << endl;
@@ -42,6 +45,16 @@ void Animal::move()
 void Animal::getType()
 {
     cout << "I am a simple animal, still not defined which type" << endl;
+}
+
+void Animal::information()
+{
+    cout << "------------------- General Information ----------------" << endl;
+    cout << "Id: " << id << endl;
+    cout << "Name: " << name << endl;
+    cout << "Age: " << age << endl;
+    cout << "Birth Date: " << birthDate << endl;
+    cout << "Sex: " << sex << endl;
 }
 
 // Get and Set Methods

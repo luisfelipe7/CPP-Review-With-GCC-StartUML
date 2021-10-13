@@ -2,7 +2,10 @@
 
 Author: Felipe Castro
 Class: Array.h
-Information: Class to Manage and Implement a Static Container with Primitive Data
+Information: Class to Manage and Implement and:
+
+Static array with primitive data.
+Dynamic array with dynamic objects.
 
 */
 
@@ -193,4 +196,190 @@ void Array::removeValueOnTheArray()
     cin >> value;
     deleteElementValueSP(value);
     printArraySP();
+}
+
+// Methods for the Animals Array
+
+void Array::initializeArrayA()
+{
+    system("cls");
+    cout << "------------------------ Initializing the Animals Array ------------------------" << endl;
+    cout << "Please indicate the quantity of animals that you want to have on the array" << endl;
+    cout << "Enter the number:" << endl;
+    cin >> sizeA;
+    animals = new Animal *[sizeA];
+    bool insert = true;
+    while (insert)
+    {
+        cout << "Do you want to insert an animal?" << endl;
+        cout << "Enter 0(No) and 1(Yes):" << endl;
+        cin >> insert;
+        if (insert && (quantityA != sizeA))
+        {
+            insertAnimal();
+        }
+    }
+}
+const int Array::getSizeA()
+{
+    return sizeA;
+}
+const int Array::getQuantityA()
+{
+    return quantityA;
+}
+void Array::setSizeA(int SizeA)
+{
+    sizeA = SizeA;
+}
+void Array::setQuantityA(int QuantityA)
+{
+    quantityA = QuantityA;
+}
+
+void Array::insertAnimal()
+{
+    int option = 0;
+    system("cls");
+    cout << "------------------------ Inserting an Animal ------------------------" << endl;
+    cout << "Please indicate if you want to insert a Dog or a Shark" << endl;
+    cout << "Enter 0(Dog) or 1(Shark):" << endl;
+    cin >> option;
+    if (option == 1)
+    {
+        insertShark();
+    }
+    else
+    {
+        insertDog();
+    }
+    system("pause");
+    system("cls");
+}
+
+void Array::insertShark()
+{
+    system("cls");
+    string tempS = "";
+    int tempI = 0;
+    bool tempB = false;
+    Shark *shark1 = new Shark();
+    cout << "------------------------ Inserting a Shark ------------------------" << endl;
+    cout << "Please enter the Id for the shark" << endl;
+    cin >> tempS;
+    shark1->setId(tempS);
+    cout << "Please enter the Name for the shark" << endl;
+    cin >> tempS;
+    shark1->setName(tempS);
+    cout << "Please enter the BirthDate for the shark" << endl;
+    cin >> tempS;
+    shark1->setBirthDate(tempS);
+    cout << "Please enter the Sex for the shark" << endl;
+    cin >> tempS;
+    shark1->setSex(tempS);
+    cout << "Please enter the age for the shark" << endl;
+    cin >> tempI;
+    shark1->setAge(tempI);
+    cout << "Please enter if the shark is under captivity" << endl;
+    cin >> tempB;
+    shark1->setUnderCaptivity(tempB);
+    cout << "Please enter the years under captivity" << endl;
+    cin >> tempI;
+    shark1->setYearsUnderCaptivity(tempI);
+    cout << "Please enter if the shark is aggresive" << endl;
+    cin >> tempB;
+    shark1->setIsAgressive(tempB);
+    cout << "Please enter if the shark is poisonous" << endl;
+    cin >> tempB;
+    shark1->setUnderCaptivity(tempB);
+    cout << endl;
+
+    //Inserting the Shark
+    animals[quantityA] = shark1;
+    quantityA++;
+
+    cout << "Animal inserted sucessfully to the array!" << endl;
+    cout << "Information about the animal inserted:" << endl;
+    animals[quantityA - 1]->information();
+}
+void Array::insertDog()
+{
+    system("cls");
+    string tempS = "";
+    int tempI = 0;
+    double tempD = 0;
+    bool tempB = false;
+    Dog *dog1 = new Dog();
+    cout << "------------------------ Inserting a Dog ------------------------" << endl;
+    cout << "Please enter the Id for the dog" << endl;
+    cin >> tempS;
+    dog1->setId(tempS);
+    cout << "Please enter the Name for the dog" << endl;
+    cin >> tempS;
+    dog1->setName(tempS);
+    cout << "Please enter the BirthDate for the dog" << endl;
+    cin >> tempS;
+    dog1->setBirthDate(tempS);
+    cout << "Please enter the Sex for the dog" << endl;
+    cin >> tempS;
+    dog1->setSex(tempS);
+    cout << "Please enter the age for the dog" << endl;
+    cin >> tempI;
+    dog1->setAge(tempI);
+    cout << "Please enter if the dog has an owner" << endl;
+    cin >> tempB;
+    dog1->setHasAnOwner(tempB);
+    cout << "Please enter if the dog is under adoption" << endl;
+    cin >> tempB;
+    dog1->setUnderAdoption(tempB);
+    cout << "Please enter the price for the dog" << endl;
+    cin >> tempD;
+    dog1->setPrice(tempD);
+    cout << "Please enter the race of the dog" << endl;
+    cin >> tempS;
+    dog1->setRace(tempS);
+    cout << endl;
+
+    //Inserting the Dog1
+    animals[quantityA] = dog1;
+    quantityA++;
+    cout << "Animal inserted sucessfully to the array!" << endl;
+    cout << "Information about the animal inserted:" << endl;
+    animals[quantityA - 1]->information();
+}
+
+void Array::printArrayA()
+{
+    system("cls");
+    cout << "------------------------ Print Animals Array ------------------------" << endl;
+    cout << "Size of the Array " << sizeA << endl;
+    cout << "Quantity of the Array " << quantityA << endl;
+    cout << "Animals on the Array: " << endl;
+    for (int i = 0; i < quantityA; i++)
+    {
+        cout << endl;
+        cout << "Animal[" << i << "]" << endl;
+        animals[i]->information();
+    }
+    system("pause");
+}
+
+void Array::deleteElementA()
+{
+    system("cls");
+    int position = 0;
+    cout << "------------------------ Delete Animal ------------------------" << endl;
+    cout << "Please enter the position of the animal that you want to delete" << endl;
+    cin >> position;
+    if (animals[position] == nullptr)
+    {
+        cout << "The position entered is already empty" << endl;
+    }
+    else
+    {
+        animals[position] = nullptr;
+        cout << "The object on the position entered was deleted" << endl;
+        quantityA--;
+    }
+    system("pause");
 }

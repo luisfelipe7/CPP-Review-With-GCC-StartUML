@@ -2,7 +2,7 @@
 
 Author: Felipe Castro
 Class: Domestic.cpp
-Information: Class to Implement a Dog inheriting from Domestic
+Information: Abstract Class to Create Multiple Kind of Domestic Animals
 
 */
 
@@ -52,6 +52,15 @@ void Domestic::receiveOrder(int Order)
         cout << "I don't understand your order...." << endl;
         break;
     }
+}
+
+void Domestic::information()
+{
+    Animal::information();
+    cout << "------------------- Domestic Information ----------------" << endl;
+    cout << "Has an Owner: " << hasAnOwner << endl;
+    cout << "Is under adoption: " << underAdoption << endl;
+    cout << "Price: " << price << endl;
 }
 
 // Gets and Sets Methods

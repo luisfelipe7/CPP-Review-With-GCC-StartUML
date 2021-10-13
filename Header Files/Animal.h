@@ -2,7 +2,7 @@
 
 Author: Felipe Castro
 Class: Animal.h
-Information: Class to Implement An Abstract Class to Generate Multiple Kinds of Animals
+Information: Implement An Abstract Class to Generate Multiple Kinds of Animals
 
 */
 
@@ -43,6 +43,7 @@ public:
     // Virtual Pure Methods
     virtual void sound() = 0;
     virtual void getType() = 0;
+    virtual void information() =0;
     // Get and Sets Methods
     const string getId();
     const string getName();

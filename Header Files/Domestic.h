@@ -2,7 +2,7 @@
 
 Author: Felipe Castro
 Class: Domestic.h
-Information: Class to Implement An Abstract Class to Generate Multiple Kinds of Animals
+Information: Implement An Abstract Class to Generate Multiple Kinds of Animals
 
 */
 
@@ -31,6 +31,7 @@ public:
     void play();
     void move();
     virtual void sound() = 0;
+    virtual void information() = 0;
     void receiveOrder(int Order);
     // Gets and Sets Methods
     const bool getHasAnOwner();

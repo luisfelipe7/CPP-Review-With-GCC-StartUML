@@ -2,7 +2,7 @@
 
 Author: Felipe Castro
 Class: Menu.h
-Information: Class to Manage the Principal and Secondary Menus and User.
+Information: Manage the principal and secondaries menus
 
 */
 
@@ -62,6 +62,10 @@ public:
     void dataStructuresMenu();
     // Quick Algorithms Menu
     void quickAlgorithmsMenu();
+    // Options to Modify/Create the Array A
+    void optionsArrayA();
+    // Calling the methods to modify the Array A
+    void modifyArrayA();
     // Options to Modify Array SP
     void optionsForArraySP();
     // Calling the Methods to Modify the Array SP

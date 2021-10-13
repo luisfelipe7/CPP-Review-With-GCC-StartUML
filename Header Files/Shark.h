@@ -2,7 +2,7 @@
 
 Author: Felipe Castro
 Class:  Shark.h
-Information: Class to Implement a Shark inheriting from Wild
+Information: Implement a Shark inheriting from Wild
 
 */
 
@@ -33,6 +33,7 @@ public:
     void sound();
     void eat(Animal &food);
     void getType();
+    void information();
     // Destructor
     ~Shark();
 };

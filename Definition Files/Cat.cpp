@@ -2,7 +2,7 @@
 
 Author: Felipe Castro
 Class: Cat.cpp
-Information: Class to Implement the Constructor and Methods for the Cat Class.
+Information: Implement the Constructor and Methods for the Cat Class.
 
 */
 

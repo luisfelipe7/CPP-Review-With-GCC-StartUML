@@ -81,6 +81,14 @@ void Shark::getType()
     cout << "I am a shark" << endl;
 }
 
+void Shark::information()
+{
+    Wild::information();
+    cout << "------------------- Shark Information ----------------" << endl;
+    cout << "Speed Km/h: " << speedKmH << endl;
+    cout << "Length m: " << length << endl;
+}
+
 // Destructor
 
 Shark::~Shark()

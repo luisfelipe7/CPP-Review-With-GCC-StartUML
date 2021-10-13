@@ -2,7 +2,7 @@
 
 Author: Felipe Castro
 Class: Menu.h
-Information: Class to Manage the Principal and Secondary Menus and User.
+Information: Class to Manage the Principal and Secondaries Menus.
 
 */
 
@@ -10,8 +10,8 @@ Information: Class to Manage the Principal and Secondary Menus and User.
 
 #include "../Header Files/Menu.h"
 
-// Defining the static attribute 
-string Menu::NAME="Felipe Castro";
+// Defining the static attribute
+string Menu::NAME = "Felipe Castro";
 
 // Constructors
 Menu::Menu()
@@ -101,9 +101,9 @@ void Menu::quickAlgorithmsMenu()
     cout << "7. Verify if a number is Armstrong" << endl;
     cout << "8. Verify if a number is Armstrong recursive" << endl;
     cout << "9. Obtain ULAM Conjecture" << endl;
-    cout << "10. Obtain Factorial Recursive"<<endl;
-    cout << "11. Obtain Fibonacci Value"<<endl;
-    cout << "12. Check Discover Value"<<endl;
+    cout << "10. Obtain Factorial Recursive" << endl;
+    cout << "11. Obtain Fibonacci Value" << endl;
+    cout << "12. Check Discover Value" << endl;
     cout << "13. Return to Main Menu" << endl;
     cout << "Please enter the number of the option:" << endl;
     cin >> option;
@@ -213,7 +213,6 @@ void Menu::dataStructuresMenu()
     case 3:
         // Pending to Implement
         break;
-        // Pending to Implement
     case 4:
         displayPrincipalMenu();
         break;
@@ -236,11 +235,30 @@ void Menu::displayArrayMenu()
     cout << "---------------------- Arrays ----------------------" << endl;
     cout << "-- These are the kind of arrays that we handle" << endl;
     cout << "1. Static with Primitive Data " << endl;
-    cout << "2. Static with Objects" << endl;
+    cout << "2. Dynamic with Dynamic Objects" << endl;
     cout << "3. Return to Data Structures" << endl;
     cout << "Please enter the number of the option:" << endl;
     cin >> option;
-    (option == 3) ? dataStructuresMenu() : optionsForArraySP();
+    switch (option)
+    {
+    case 1:
+        optionsForArraySP();
+        break;
+    case 2:
+        optionsArrayA();
+        break;
+    case 3:
+        dataStructuresMenu();
+        break;
+    default:
+        system("cls");
+        cout << "------------------ Error ------------" << endl;
+        cout << "Please enter a valid option" << endl;
+        cout << endl;
+        system("pause");
+        displayArrayMenu();
+        break;
+    }
 }
 
 void Menu::optionsForArraySP()
@@ -285,7 +303,7 @@ void Menu::modifyArraySP()
         array1.printArraySP();
         break;
     case 7:
-        //Nothing to do here
+        displayArrayMenu();
         break;
     default:
         cout << "------------------ Error ------------------" << endl;
@@ -295,6 +313,53 @@ void Menu::modifyArraySP()
         break;
     }
     optionsForArraySP();
+}
+
+// --------------- Array A -----------------------------
+
+void Menu::optionsArrayA()
+{
+    system("cls");
+    cout << "---------------------- Dynamic with Dynamic Objects ----------------------" << endl;
+    cout << "-- Here are the actions that you can do" << endl;
+    cout << "1. Initialize the Array" << endl;
+    cout << "2. Insert object at the end" << endl;
+    cout << "3. Print Array" << endl;
+    cout << "4. Remove element from Array"<<endl;
+    cout << "5. Return to Arrays Menu" << endl;
+    cout << "Please enter the number of the option:" << endl;
+    cin >> option;
+    (option == 5) ? displayArrayMenu() : modifyArrayA();
+}
+
+void Menu::modifyArrayA()
+{
+    system("cls");
+    switch (option)
+    {
+    case 1:
+        array1.initializeArrayA();
+        break;
+    case 2:
+        array1.insertAnimal();
+        break;
+    case 3:
+        array1.printArrayA();
+        break;
+    case 4:
+        array1.deleteElementA();
+        break;
+    case 5:
+        displayArrayMenu();
+        break;
+    default:
+        cout << "------------------ Error ------------------" << endl;
+        cout << "Please enter a valid option" << endl;
+        cout << endl;
+        system("pause");
+        break;
+    }
+    optionsArrayA();
 }
 
 // ----------------- Veterinary Menu ---------------------

@@ -2,7 +2,7 @@
 
 Author: Felipe Castro
 Class: Wild.h
-Information: Class to Implement An Abstract Class to Generate Multiple Kinds of Wild Animals
+Information: Implement An Abstract Class to Generate Multiple Kinds of Wild Animals
 
 */
 
@@ -38,6 +38,7 @@ public:
     const bool getYearsUnderCaptivity();
     // Methods
     virtual void sound() = 0;
+    virtual void information() = 0;
     void captivityInformation();
     void escape();
     // Destructor

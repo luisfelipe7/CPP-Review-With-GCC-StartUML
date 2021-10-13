@@ -2,7 +2,7 @@
 
 Author: Felipe Castro
 Class:  Dog.h
-Information: Class to Implement a Dog inheriting from Domestic
+Information: Implement a Dog inheriting from Domestic
 
 */
 
@@ -29,6 +29,7 @@ public:
     // Methods
     void sound();
     void getType();
+    void information();
     // Get and Set Methods
     const bool getHasPedigree();
     const string getRace();

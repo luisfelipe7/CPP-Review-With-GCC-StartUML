@@ -2,7 +2,7 @@
 
 Author: Felipe Castro
 Class: Dog.cpp
-Information: Class to Implement An Abstract Class to Generate Multiple Kinds of Animals
+Information: Class to Implement a Dog inheriting from Domestic
 
 */
 
@@ -53,9 +53,17 @@ void Dog::setRace(string Race)
     race = Race;
 }
 
+void Dog::information()
+{
+    Domestic::information();
+    cout << "------------------- Dog Information ----------------" << endl;
+    cout << "Has Pedigree: " << hasPedigree << endl;
+    cout << "Race: " << race << endl;
+}
+
 // Destructor
 
 Dog::~Dog()
 {
-    cout<<"Destroying the Dog"<<endl;
+    cout << "Destroying the Dog" << endl;
 }

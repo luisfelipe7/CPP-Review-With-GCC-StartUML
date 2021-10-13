@@ -88,9 +88,20 @@ void Wild::captivityInformation()
     cout << textToPrint.str() << endl;
 }
 
-void Wild::escape(){
-    cout << "I escaped"<<endl;
-    isUnderCaptivity=false;
+void Wild::escape()
+{
+    cout << "I escaped" << endl;
+    isUnderCaptivity = false;
+}
+
+void Wild::information()
+{
+    Animal::information();
+    cout << "------------------- Wild Information ----------------" << endl;
+    cout << "Is Under Captivity: " << isUnderCaptivity << endl;
+    cout << "Years Under Captivity: " << yearsUnderCaptivity << endl;
+    cout << "Is Agreesive: " << isAgressive << endl;
+    cout << "Is Poisonous: " << isPoisonous << endl;
 }
 
 // Destructor

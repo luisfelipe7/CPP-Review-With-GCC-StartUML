@@ -2,7 +2,7 @@
 
 Author: Felipe Castro
 Class: Cat.h
-Information: Class to Implement the Cat with multiple attributes and methods
+Information: Implement the Cat with multiple attributes and methods
 
 */
 
