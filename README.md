@@ -48,7 +48,7 @@ $ g++ Main.cpp
 2. The Definition files are located in the folder called Definition Files.
 3. The Main.cpp file is the one in charge of running the program and including the classes to compile the files.
 4. Finally, these are the principal relations between the classes:
-<img src="https://raw.githubusercontent.com/luisfelipe7/CPP-Review-With-GCC-StartUML/master/Relations.png?token=AGFNAWM6T274CGDN6MKD6D3BOBJNG" alt="Relations" width="1100" height="420">
+<img src="https://raw.githubusercontent.com/luisfelipe7/CPP-Review-With-GCC-StartUML/master/Relations.png?token=AGFNAWMFEYAD47IL77XV4QLBPK6JO" alt="Relations" width="1100" height="420">
 <h6>*Some of the constructors are not showing all the parameters and some classes are not including all the methods, the idea of the UML was to define the relations between the classes</h6>
 
 ## Credits
